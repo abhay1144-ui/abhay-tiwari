@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mental Health Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Practice daily mental health exercises to improve your wellbeing and mindfulness.">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Mental Health Exercises Logo" class="logo">
+            </div>
+            <h1>Daily Mental Health Exercises</h1>
+            <p class="subtitle">Simple practices for your mental wellbeing</p>
+            <div class="auth-container" id="auth-container">
+                <button id="login-btn" class="auth-btn btn-press-effect">Login</button>
+                <button id="register-btn" class="auth-btn btn-press-effect">Register</button>
+                <div id="user-info" class="user-info" style="display: none;">
+                    <span id="user-name"></span>
+                    <button id="logout-btn" class="auth-btn btn-press-effect">Logout</button>
+                </div>
+            </div>
+        </header>
+        
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Strengthen Your Mental Health Daily</h2>
+                <div class="decorative-line"></div>
+                <p>Just a few minutes each day can lead to lasting improvements in your mental wellbeing.</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-meditation.jpg" alt="Person meditating peacefully" class="hero-img">
+            </div>
+        </section>
+        
+        <section class="exercise-container">
+            <div class="exercise-navigation">
+                <button id="prev-btn" class="nav-btn btn-press-effect" disabled>Previous</button>
+                <span id="exercise-counter">1/5</span>
+                <button id="next-btn" class="nav-btn btn-press-effect">Next</button>
+            </div>
+            
+            <div id="exercise-display" class="exercise-content">
+                <h2 id="exercise-title">Deep Breathing</h2>
+                <div class="decorative-line"></div>
+                <div class="exercise-body">
+                    <div id="exercise-animation" class="animation-container">
+                        <div class="breathing-circle"></div>
+                    </div>
+                    <p id="exercise-description">Breathe in slowly through your nose for 4 counts, hold for 2, then exhale through your mouth for 6 counts. Repeat for 1 minute.</p>
+                </div>
+                <div class="timer-container">
+                    <button id="timer-btn" class="timer-btn btn-press-effect">Start 1-Minute Timer</button>
+                    <div id="timer-display" class="timer-display">01:00</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="benefits-section">
+            <h2>Benefits of Daily Mental Exercises</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card card-hover-effect">
+                    <div class="benefit-icon">
+                        <img src="images/stress-reduction.png" alt="Stress Reduction" class="benefit-img">
+                    </div>
+                    <h3>Stress Reduction</h3>
+                    <p>Regular practice helps lower cortisol levels and reduces overall stress.</p>
+                </div>
+                <div class="benefit-card card-hover-effect">
+                    <div class="benefit-icon">
+                        <img src="images/improved-focus.png" alt="Improved Focus" class="benefit-img">
+                    </div>
+                    <h3>Improved Focus</h3>
+                    <p>Strengthens attention and helps maintain concentration throughout the day.</p>
+                </div>
+                <div class="benefit-card card-hover-effect">
+                    <div class="benefit-icon">
+                        <img src="images/better-sleep.png" alt="Better Sleep" class="benefit-img">
+                    </div>
+                    <h3>Better Sleep</h3>
+                    <p>Calms the mind and prepares the body for restful sleep patterns.</p>
+                </div>
+                <div class="benefit-card card-hover-effect">
+                    <div class="benefit-icon">
+                        <img src="images/emotional-regulation.png" alt="Emotional Regulation" class="benefit-img">
+                    </div>
+                    <h3>Emotional Regulation</h3>
+                    <p>Builds resilience and ability to manage difficult feelings.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tracking-section glass-effect">
+            <h2>Track Your Progress</h2>
+            <div class="decorative-line"></div>
+            <p>Mark exercises you've completed to build a daily practice:</p>
+            <div class="habit-tracker">
+                <div class="days-container">
+                    <div class="day-labels">
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                        <span>Sun</span>
+                    </div>
+                    <div class="checkboxes">
+                        <input type="checkbox" id="day1" class="day-checkbox">
+                        <input type="checkbox" id="day2" class="day-checkbox">
+                        <input type="checkbox" id="day3" class="day-checkbox">
+                        <input type="checkbox" id="day4" class="day-checkbox">
+                        <input type="checkbox" id="day5" class="day-checkbox">
+                        <input type="checkbox" id="day6" class="day-checkbox">
+                        <input type="checkbox" id="day7" class="day-checkbox">
+                    </div>
+                </div>
+                <button id="reset-tracker" class="reset-btn btn-press-effect">Reset Tracker</button>
+            </div>
+            <div class="progress-image">
+                <img src="images/progress-tracking.jpg" alt="Person tracking progress" class="progress-img">
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card card-hover-effect">
+                    <div class="testimonial-avatar">
+                        <img src="images/avatar-1.jpg" alt="User Avatar" class="avatar-img">
+                    </div>
+                    <p class="testimonial-text">"These daily exercises have helped me manage my anxiety. I feel more centered and in control."</p>
+                    <p class="testimonial-author">- Sarah K.</p>
+                </div>
+                <div class="testimonial-card card-hover-effect">
+                    <div class="testimonial-avatar">
+                        <img src="images/avatar-2.jpg" alt="User Avatar" class="avatar-img">
+                    </div>
+                    <p class="testimonial-text">"I've been sleeping better since I started the mindfulness practices. Just 5 minutes a day makes a difference."</p>
+                    <p class="testimonial-author">- Michael T.</p>
+                </div>
+                <div class="testimonial-card card-hover-effect">
+                    <div class="testimonial-avatar">
+                        <img src="images/avatar-3.jpg" alt="User Avatar" class="avatar-img">
+                    </div>
+                    <p class="testimonial-text">"The tracking feature keeps me accountable. I've maintained a 30-day streak and feel much more balanced."</p>
+                    <p class="testimonial-author">- Jamie L.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recommended Books Section -->
+        <section class="books-section">
+            <h2>✨ Relax and Read ✨</h2>
+            <div class="decorative-line"></div>
+            <p class="section-description">Discover calm and insight through these curated books to enhance your mental wellbeing journey.</p>
+            
+            <div class="section-intro">
+                <div class="intro-content">
+                    <h3>Why Reading Helps Mental Health</h3>
+                    <p>Reading can reduce stress, improve focus, increase empathy, and provide valuable insights and techniques for managing mental health challenges. These carefully selected books complement the exercises on this site.</p>
+                    <ul class="benefits-list">
+                        <li><span class="benefit-icon">📚</span> Evidence-based approaches</li>
+                        <li><span class="benefit-icon">🧠</span> Written by experts</li>
+                        <li><span class="benefit-icon">💡</span> Practical techniques</li>
+                        <li><span class="benefit-icon">🌱</span> Long-term growth</li>
+                    </ul>
+                </div>
+                <div class="intro-image">
+                    <img src="images/reading-benefits.jpg" alt="Person reading a book" class="reading-img">
+                </div>
+            </div>
+            
+            <div class="books-filter">
+                <button class="filter-btn active" data-category="all">All Categories</button>
+                <button class="filter-btn" data-category="Mindfulness">Mindfulness</button>
+                <button class="filter-btn" data-category="Anxiety">Anxiety</button>
+                <button class="filter-btn" data-category="Depression">Depression</button>
+                <button class="filter-btn" data-category="Stress Management">Stress Management</button>
+                <button class="filter-btn" data-category="Self-Care">Self-Care</button>
+            </div>
+            
+            <div class="books-grid" id="books-container">
+                <!-- Books will be loaded dynamically -->
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo-white.png" alt="Mental Health Exercises Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:abhay80890@gmail.com">abhay80890@gmail.com</a></p>
+                <p>Phone: <a href="tel:7571839557">757-183-9557</a></p>
+            </div>
+            <p>&copy; 2025 Mental Health Resources</p>
+        </div>
+    </footer>
+    
+    <!-- Auth Modals -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <div class="decorative-line"></div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="submit-btn btn-press-effect">Login</button>
+                <p class="error-message" id="login-error"></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <div class="decorative-line"></div>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Name</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" minlength="6" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm">Confirm Password</label>
+                    <input type="password" id="register-confirm" minlength="6" required>
+                </div>
+                <button type="submit" class="submit-btn btn-press-effect">Register</button>
+                <p class="error-message" id="register-error"></p>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
